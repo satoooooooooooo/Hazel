@@ -1,0 +1,4 @@
+[submodule "Hazel/vendor/GLFW"]
+	path = Hazel/vendor/GLFW
+	url = https://github.com/TheCherno/glfw.git
+	branch = C:/Program Files/Git/b4b4319
