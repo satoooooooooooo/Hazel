@@ -1,14 +1,14 @@
 #pragma once
+#pragma warning(disable:4251)
 
 #include <memory>
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 
 namespace Hazel {
-
-
 
 	class HAZEL_API Log
 	{
@@ -34,8 +34,8 @@ namespace Hazel {
 #define HZ_CORE_CRITICAL(...)   ::Hazel::Log::GetCoreLogger()->critical(__VA_ARGS__)
 									  
 // Client log macros				  
-#define HZ_CLIENT_TRACE(...)    ::Hazel::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define HZ_CLIENT_INFO(...)     ::Hazel::Log::GetClientLogger()->info(__VA_ARGS__)
-#define HZ_CLIENT_WARN(...)     ::Hazel::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define HZ_CLIENT_ERROR(...)    ::Hazel::Log::GetClientLogger()->error(__VA_ARGS__)
-#define HZ_CLIENT_CRITICAL(...) ::Hazel::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define HZ_TRACE(...)    ::Hazel::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define HZ_INFO(...)     ::Hazel::Log::GetClientLogger()->info(__VA_ARGS__)
+#define HZ_WARN(...)     ::Hazel::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define HZ_ERROR(...)    ::Hazel::Log::GetClientLogger()->error(__VA_ARGS__)
+#define HZ_CRITICAL(...) ::Hazel::Log::GetClientLogger()->critical(__VA_ARGS__)
